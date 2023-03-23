@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: white;
+            width: 100%;
+            margin: auto;
+        }
+
+        .cabecalho {
+            background-color: rgb(28, 112, 196);
+            padding: 50px;
+            width: 100%;
+            margin: 0;
+            color: white;
+            text-align: center;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: left;
+            background-color: rgb(38, 39, 39);
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 15px;
+        }
+
+        .menu a:hover {
+            background-color: rgb(58, 119, 119);
+            transition: 0.7s;
+        }
+
+        .corpo {
+            display: flex;
+            width: 30%;
+        }
+
+        .lateral {
+            background-color: rgb(235, 235, 235);
+            padding: 40px;
+            flex: 30%;
+            padding-left: 10px;
+        }
+
+        .lateral img {
+            max-width: 250px;
+        }
+
+        .conteudo {
+            flex: 70%;
+            padding-left: 30px;
+            padding-top: 40px;
+        }
+
+        .conteudo img {
+            max-width: 500px;
+        }
+
+        .rodape {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(190, 190, 190);
+            padding: 25px;
+            color: black;
+        }
+
+        @media screen and (max-width: 650px){
+            .container{
+                width: 100%;
+            }
+
+            .menu{
+                flex-direction: column;
+            }
+
+            .menu a{
+                text-align: center;
+            }
+
+            .corpo{
+                width: 100%;
+                text-align: center;
+                flex-direction: column;
+            }
+            
+            .lateral{
+                order: 2;
+            }
+
+            .conteudo{
+                order: 1;
+            }
+
+            .lateral img {
+            display: block;
+            margin: auto;
+            max-width: 350px;
+        }
+
+        .conteudo img {
+            display: block;
+            margin: auto;
+            max-width: 500px;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="cabecalho">
+            <h1>Senac São Paulo</h1>
+            <p>Desenvolvimento de layout com <b>flex</b> layout.</p>
+        </div>
+
+        <div class="menu">
+            <a href="#">Início</a>
+            <a href="#">Loja</a>
+            <a href="#">Contato</a>
+            <a href="#">Sobre</a>
+        </div>
+
+        <div class="corpo">
+            <div class="lateral">
+                <h2>O Senac</h2>
+                <img src="img/senac.png" alt="Senac logo">
+
+                <p>Um texto aleatório qualquer.</p>
+            </div>
+
+            <div class="conteudo">
+                <h2>TITULO DA POSTAGEM</h2>
+                <p><b>Lucas da Silva Mattos, Mar 22, 2023</b></p>
+                <img src="img/senacpinda.jpg" alt="Senac Pinda" width="500px">
+                <p>Um texto lorem ipsum qualquer</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque esse, sit laborum accusamus quis
+                    ipsam expedita aspernatur incidunt veritatis veniam iusto commodi animi in harum fuga ratione vel,
+                    provident officia?</p>
+            </div>
+        </div>
+
+        <div class="rodape">
+            <h2>&copy; Senac 2023</h2>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
